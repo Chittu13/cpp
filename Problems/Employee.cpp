@@ -26,19 +26,13 @@ No tax for Gross salary<=40000
 
 #include<iostream>
 using namespace std;
-
 struct employee
 {
 string name,grade;
 int id,basic,da,hra,gross;
 float tax,net_sal;
-
 public:
-
-
-
 }e[10];
-
 int main()
 {
     int num,p;
@@ -56,25 +50,43 @@ int main()
         cin>>e[i].da;
         cout<<"\nEnter the Employee hra: ";
         cin>>e[i].hra;
-        cout<<"\nEnter the Employee Grade: ";
-        cin>>e[i].grade;
+        cout<<"\n\n";
     }
-    for (int i=0;i<num;i++)
+    for(int i=0;i<num;i++)
     {
         e[i].gross=e[i].basic+e[i].da+e[i].hra;
-        if(e[i].grade=="1")
+        if(e[i].gross<=40000)
         {
             e[i].tax=0;
         }
-        else if(e[i].grade=="2")
+        else if (e[i].gross>40000 & e[i].gross<=75000)
         {
-            e[i].tax=(e[i].gross)*(2/100);
+            e[i].tax=e[i].gross*0.1/100;
         }
-        else if(e[i].grade=="3")
+        else if (e[i].gross>75000 )
         {
-            e[i].tax=(e[i].gross)*(4/100);
+            e[i].tax=e[i].gross*0.1/100;
         }
-            e[i].net_sal=e[i].gross-e[i].tax;
+        e[i].net_sal=e[i].gross-e[i].tax;
+    }
+    for(int i=0;i<num;i++)
+    {
+        if (e[i].basic<=30000)
+        {
+            e[i].grade="Grade1";
+        }
+        else if(e[i].basic>30000 & e[i].basic<=25000)
+        {
+            e[i].grade="Grade2";
+        }
+        else if(e[i].basic>25000 & e[i].basic<=20000)
+        {
+            e[i].grade="Grade3";
+        }
+        else if(e[i].basic>20000 & e[i].basic<=15000)
+        {
+            e[i].grade="Grade4";
+        }
     }
 for(int i=0;i<num;i++)
 {
@@ -89,18 +101,26 @@ for(int i=0;i<num;i++)
         }
     }
 }
-
-
-
-
-cout<<"Id"<<"\t\t"<<"Name"<<"\t\t"<<"Grade: \n";
-
+cout<<"Id"<<"\t\t"<<"Name"<<"\t\t"<<"Grade:"<<"\t\t"<<"tax\n";
 for(int i=0;i<num;i++)
 {
     cout<<e[i].id<<"\t"<<e[i].name<<"\t\t"<<e[i].grade<<"\t\t"<<e[i].tax<<"\n";
-}   
-cout<<"\nHighest tax paid by the Employee: ";
-cout<<e[0].id<<"\t"<<e[0].name<<"\t\t"<<e[0].grade<<"\t\t"<<e[0].tax<<"\n";
+}  
+
+for(int i=0;i<num;i++)
+{
+    for(int j=i+1;j<num;j++)
+    {
+        if(e[i].tax>e[j].tax)
+        
+        {
+            employee p=e[i];
+            e[i]=e[j];
+            e[j]=p;
+        }
+    }
+}
+cout<<"\nHighest tax paid by the Employee: \n";
+cout<<e[0].id<<"\t"<<e[0].name<<"\t\t\t"<<e[0].grade<<"\t\t"<<e[0].tax<<"\n";
 return 0;
 }
-
