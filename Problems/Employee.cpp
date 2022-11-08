@@ -71,19 +71,19 @@ int main()
     }
     for(int i=0;i<num;i++)
     {
-        if (e[i].basic<=30000)
+        if (e[i].basic>=30000)
         {
             e[i].grade="Grade1";
         }
-        else if(e[i].basic>30000 & e[i].basic<=25000)
+        else if(e[i].basic<30000 & e[i].basic>=25000)
         {
             e[i].grade="Grade2";
         }
-        else if(e[i].basic>25000 & e[i].basic<=20000)
+        else if(e[i].basic<25000 & e[i].basic>=20000)
         {
             e[i].grade="Grade3";
         }
-        else if(e[i].basic>20000 & e[i].basic<=15000)
+        else if(e[i].basic<20000 & e[i].basic>=15000)
         {
             e[i].grade="Grade4";
         }
@@ -106,7 +106,6 @@ for(int i=0;i<num;i++)
 {
     cout<<e[i].id<<"\t"<<e[i].name<<"\t\t"<<e[i].grade<<"\t\t"<<e[i].tax<<"\n";
 }  
-
 for(int i=0;i<num;i++)
 {
     for(int j=i+1;j<num;j++)
@@ -121,6 +120,6 @@ for(int i=0;i<num;i++)
     }
 }
 cout<<"\nHighest tax paid by the Employee: \n";
-cout<<e[0].id<<"\t"<<e[0].name<<"\t\t\t"<<e[0].grade<<"\t\t"<<e[0].tax<<"\n";
+cout<<e[-1].id<<"\t"<<e[-1].name<<"\t\t\t"<<e[-1].grade<<"\t\t"<<e[-1].tax<<"\n";
 return 0;
 }
