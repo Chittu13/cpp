@@ -1,3 +1,29 @@
+/*  # 1. Create a structure EMPLOYEE with the field's employee name, id, greade, basic, da, hra, gross salary, net salary. Input the details of n employees and calculate 
+the gross salary, net salary and tax paid for each of them. Write the functions to perform the following operations: 
+    1. Sort the employee details based on id.
+    2. Display the details of all the employees of a given grade and sort based
+    3. Display the details of employee who pays Highes Tax.
+Display the details of employee who pays Lowest Tax.
+Gross salary = basic+da+hra:
+Tax=Gross salary*(tax percentage/100)
+Net salary=Gross Salary-Tax
+
+Basic Details:
+basic=Rs.30000 for Grade1
+basic=Rs.25000 for Grade1
+basic=Rs.20000 for Grade1
+basic=Rs.15000 for Grade1
+
+
+Tax Details:
+No tax for Gross salary<=40000
+10% tax for gross salary > 40000 and <=75000
+15% tax for gross salary >75000 
+    */
+
+
+
+
 #include<iostream>
 using namespace std;
 
