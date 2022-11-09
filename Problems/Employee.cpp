@@ -120,6 +120,6 @@ for(int i=0;i<num;i++)
     }
 }
 cout<<"\nHighest tax paid by the Employee: \n";
-cout<<e[-1].id<<"\t"<<e[-1].name<<"\t\t\t"<<e[-1].grade<<"\t\t"<<e[-1].tax<<"\n";
+cout<<e[num-1].id<<"\t"<<e[num-1].name<<"\t\t\t"<<e[num-1].grade<<"\t\t"<<e[num-1].tax<<"\n";
 return 0;
 }
