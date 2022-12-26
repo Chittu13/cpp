@@ -1,7 +1,7 @@
 ## 1. Write a c++ program to compute the addition of two numbers using function overloading concept.
 
 
-```c++
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -31,7 +31,7 @@ int main()
 > 4) If a function return type is other than void, and the return statement doesn’t exist in function body.
 > 5) If a function contains switch or goto statement.
 
-```c++
+```cpp
 #include <iostream>
 using namespace std;
 inline int add(int a,int b)
@@ -48,7 +48,7 @@ int main()
 
 # 3. Write a c++ program for addition of 2*2 matrix
 
-```c++
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -71,7 +71,7 @@ return 0;
 
 ## 4. Write a c++ program to read and display student details using structures.
 
-```c++
+```cpp
 // Write a c++ program to read and display student details using structures.
 
 #include <iostream>
