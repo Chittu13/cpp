@@ -70,3 +70,40 @@ return 0;
 ```
 
 ## 4. Write a c++ program to read and display student details using structures.
+
+```c++
+// Write a c++ program to read and display student details using structures.
+
+#include <iostream>
+using namespace std;
+
+struct student{
+    
+    char name[50];
+    int roll_num,age;
+    
+    void read()
+    {
+        cout<<"Enter the name of the student: "<<endl;
+        cin>>name;
+        cout<<"Enter the student Roll Number: "<<endl;
+        cin>>roll_num;
+        cout<<"Enter the age of the student: "<<endl;
+        cin>>age;
+    }
+    void display()
+    {
+        cout<<"Name: "<<name<<endl<<"Roll_Number: "<<roll_num<<endl<<"Age: "<<age<<endl;
+    }
+        
+    
+};
+
+int main()
+{
+    struct student s1;
+    s1.read();
+    s1.display();
+    return 0;
+}
+```
