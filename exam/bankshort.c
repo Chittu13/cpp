@@ -35,8 +35,7 @@ void bank::withdraw() //withdrawing an amount
  cout<<"\n Cannot Withdraw Amount";
  bal-=wamt1;
 }
-void bank::display() //displaying the details
-{
+void bank::display() 
  cout<<"\n ----------------------";
  cout<<"\n Accout No. : "<<acno;
  cout<<"\n Name : "<<nm;
@@ -58,9 +57,9 @@ int main()
  cin>>acc_type;
  cout<<"\n Balance : ";
  cin>>balance;
- bank b1(acc_no, name, acc_type, balance); //object is created
- b1.deposit(); //
- b1.withdraw(); // calling member functions
- b1.display(); //
+ bank b1(acc_no, name, acc_type, balance); 
+ b1.deposit(); 
+ b1.withdraw(); 
+ b1.display(); 
  return 0;
 }
