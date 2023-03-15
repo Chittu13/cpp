@@ -19,15 +19,14 @@ class bank
  void withdraw();
  void display();
 };
-void bank::deposit() //depositing an amount
+void bank::deposit() 
 {
  int damt1;
  cout<<"\n Enter Deposit Amount = ";
  cin>>damt1;
  bal+=damt1;
 }
-void bank::withdraw() //withdrawing an amount
-{
+void bank::withdraw() 
  int wamt1;
  cout<<"\n Enter Withdraw Amount = ";
  cin>>wamt1;
