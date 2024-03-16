@@ -47,7 +47,23 @@ cout<<num[i]<<" ";
 }
 return 0;
 }
-
-
-
+```
+# Iterator
+```cpp
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+vector<int> num; 
+for(int i=0;i<9;i++)
+{
+num.push_back(i); // it will push the elements form 0 to 8
+}
+for(auto a=num.begin();a!=num.end();a++)
+{
+    cout<<*a<<' ';
+}
+return 0;
+}
 ```
