@@ -38,7 +38,8 @@ for(int i=0;i<num.size();i++)
 cout<<num[i]<<" "; 
 }
 num.push_back(4);
-cout<<"\nlast element of array: "<<num[num.size()];
+int x=num.size();
+cout<<"\nlast element of array: "<<num[x-1]<<"\n";
 num.pop_back();
 num.insert(num.end(),8);
 for(int i=0;i<num.size();i++){
@@ -46,6 +47,7 @@ cout<<num[i]<<" ";
 }
 return 0;
 }
+
 
 
 ```
